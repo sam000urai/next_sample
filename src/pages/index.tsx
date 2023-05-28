@@ -10,7 +10,7 @@ export default function Home() {
       <p className="mb-2 text-center">sample text</p>
       <button className="btn-blue">Let's Start!!</button>
       <button className="btn-blue">Start!!</button>
-
     </section >
+
   )
 }
