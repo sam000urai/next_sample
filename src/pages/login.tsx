@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
-import { auth } from '../firebase';
+import { auth } from '../plugins/firebase';
+import { provider } from '../plugins/firebase';
 
 const LoginPage = () => {
     const router = useRouter();
@@ -17,10 +18,9 @@ const LoginPage = () => {
         return () => unsubscribe();
     }, [router]);
 
-    const handleGoogleLogin = () => {
-        const provider = new firebase.auth.GoogleAuthProvider();
-        auth.signInWithPopup(provider);
-    };
+    // const handleGoogleLogin = () => {
+    //     auth.signInWithPopup(provider);
+    // };
 
     const handleLineLogin = () => {
         // LINEログインのロジックを実装します
@@ -29,7 +29,7 @@ const LoginPage = () => {
     return (
         <div>
             <h1>ログインページ</h1>
-            <button onClick={handleGoogleLogin}>Googleでログイン</button>
+            {/* <button onClick={handleGoogleLogin}>Googleでログイン</button> */}
             <button onClick={handleLineLogin}>LINEでログイン</button>
         </div>
     );
