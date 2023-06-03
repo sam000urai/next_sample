@@ -1,5 +1,6 @@
 import Layout from '@/components/Layout';
 import { siteConfig } from '../../site.config';
+import Link from 'next/link';
 
 const Home = () => {
   return (
@@ -8,6 +9,7 @@ const Home = () => {
         <h1 className="text-5xl mb-8">{siteConfig.title}</h1>
         <div className="grid md:gap-6 mt-10 md:grid-cols-2 w-full my-12">
           <h1>test</h1>
+          <Link href="/login">loginページ</Link>
         </div>
       </div>
     </Layout>
